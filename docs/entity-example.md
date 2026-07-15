@@ -82,7 +82,14 @@ import { useUnit } from 'effector-react'
 
 import { DataLoader } from '@modelstack/react-ui'
 
-import { $store, setCount, setError, setFetching, setList, setLoading } from './category.store'
+import {
+  $store,
+  setCount,
+  setError,
+  setFetching,
+  setList,
+  setLoading,
+} from './category.store'
 
 export const CategoryList = ({ api }: CategoryListProps) => {
   const store = useUnit($store)

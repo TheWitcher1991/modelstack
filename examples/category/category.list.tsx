@@ -1,17 +1,10 @@
-import { useEffect } from 'react'
+import { createQueryBridge } from '@modelstack/effector'
 import { useUnit } from 'effector-react'
 
 import { DataLoader } from '@modelstack/react-ui'
 
 import type { createCategoryApi } from './category.api'
-import {
-  $store,
-  setCount,
-  setError,
-  setFetching,
-  setList,
-  setLoading,
-} from './category.store'
+import { categoryStore } from './category.store'
 
 type CategoryApi = ReturnType<typeof createCategoryApi>
 
@@ -20,21 +13,10 @@ interface CategoryListProps {
 }
 
 export const CategoryList = ({ api }: CategoryListProps) => {
-  const store = useUnit($store)
+  const store = useUnit(categoryStore.$store)
   const query = api.useCategories(store.filter)
 
-  useEffect(() => {
-    setLoading(query.isLoading)
-    setFetching(query.isFetching)
-    setError(query.isError)
-  }, [query.isError, query.isFetching, query.isLoading])
-
-  useEffect(() => {
-    if (!query.data) return
-
-    setList(query.data)
-    setCount(query.data.length)
-  }, [query.data])
+  createQueryBridge(categoryStore, query)
 
   return (
     <DataLoader
