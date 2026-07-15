@@ -1,0 +1,12 @@
+{
+  "name": "@modelstack/react-query",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "peerDependencies": {
+    "@modelstack/core": "workspace:*",
+    "@modelstack/http": "workspace:*",
+    "@tanstack/react-query": "^5.62.0"
+  }
+}

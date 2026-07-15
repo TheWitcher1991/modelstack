@@ -1,0 +1,30 @@
+{
+  "name": "modelstack-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "@tanstack/react-query": "^5.62.11",
+    "axios": "^1.7.9",
+    "effector": "^23.3.0",
+    "effector-react": "^23.3.0",
+    "react": "^18.3.1",
+    "react-hook-form": "^7.54.2",
+    "ts-pattern": "^5.6.0",
+    "zod": "^3.24.1"
+  }
+}

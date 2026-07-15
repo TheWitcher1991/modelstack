@@ -1,0 +1,12 @@
+{
+  "name": "@modelstack/effector",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "peerDependencies": {
+    "@modelstack/core": "workspace:*",
+    "effector": "^23.3.0",
+    "react": "^18.3.0"
+  }
+}

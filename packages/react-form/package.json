@@ -1,0 +1,13 @@
+{
+  "name": "@modelstack/react-form",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "peerDependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "@modelstack/core": "workspace:*",
+    "@tanstack/react-query": "^5.62.0",
+    "react-hook-form": "^7.54.0"
+  }
+}
